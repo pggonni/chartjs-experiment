@@ -6,6 +6,8 @@ A collection of charts and dashboards created using the [Chart.js](https://githu
 
 ## Current Charts
 
-#### COVID-19 [Line Chart](https://www.chartjs.org/docs/latest/charts/line.html)
+#### COVID-19
+See [Line Chart](https://www.chartjs.org/docs/latest/charts/line.html) docs
 
-#### Regional Sales [Doughnut Chart](https://www.chartjs.org/docs/latest/charts/doughnut.html)
+#### Regional Sales
+See [Doughnut Chart](https://www.chartjs.org/docs/latest/charts/doughnut.html) docs
