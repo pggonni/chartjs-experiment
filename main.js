@@ -1,4 +1,5 @@
-const ctx = document.querySelector('#chart').getContext('2d');
+// COVID-19 Chart
+const ctx = document.querySelector('#covid-it-ca-chart').getContext('2d');
 
 const caGradient = ctx.createLinearGradient(300, 0, 300, 200);
 caGradient.addColorStop(0, 'rgba(255, 100, 100, .3)');
@@ -42,8 +43,55 @@ const chart = new Chart(ctx, {
             '06 April',
             '07 April',
             '08 April',
+            '09 April',
+            '10 April',
+            '11 April',
+            '12 April'
         ],
         datasets: [{
+            label: 'Covid Cases in Italy',
+            data: [
+                2651, 
+                2547,
+                3497,
+                3590,
+                3233,
+                3526,
+                4207,
+                5322,
+                5986,
+                6557,
+                5560,
+                4789,
+                5249,
+                5210,
+                6153,
+                5959,
+                5974,
+                5217,
+                4050,
+                4053,
+                4782,
+                4668,
+                4585,
+                4805,
+                4316,
+                3599,
+                3039,
+                3836,
+                4204,
+                3951,
+                4694,
+                4092
+            ],
+            backgroundColor: itGradient,
+            borderColor: itColor,
+            pointRadius: 0,
+            pointHoverRadius: 0,
+            pointBackgroundColor: itColor,
+            pointHitRadius: 32,
+            tension: 0
+        }, {
             label: 'Covid Cases in Canada',
             data: [
                 21, 
@@ -74,54 +122,19 @@ const chart = new Chart(ctx, {
                 1495,
                 1155,
                 1230,
-                1394
+                1394,
+                1474,
+                1383,
+                1170,
+                1065
             ],
             backgroundColor: caGradient,
             borderColor: caColor,
-            pointRadius: 3,
-            pointHoverRadius: 6,
+            pointRadius: 0,
+            pointHoverRadius: 0,
             pointBackgroundColor: caColor,
             pointHitRadius: 32,
-            tension: 0.3
-        }, {
-            label: 'Covid Cases in Italy',
-            data: [
-                2651, 
-                2547,
-                3497,
-                3590,
-                3233,
-                3526,
-                4207,
-                5322,
-                5986,
-                6557,
-                5560,
-                4789,
-                5249,
-                5210,
-                6153,
-                5959,
-                5974,
-                5217,
-                4050,
-                4053,
-                4782,
-                4668,
-                4585,
-                4805,
-                4316,
-                3599,
-                3039,
-                3836
-            ],
-            backgroundColor: itGradient,
-            borderColor: itColor,
-            pointRadius: 3,
-            pointHoverRadius: 6,
-            pointBackgroundColor: itColor,
-            pointHitRadius: 32,
-            tension: 0.3
+            tension: 0
         }]
     },
     options: {
@@ -139,3 +152,45 @@ const chart = new Chart(ctx, {
         }
     }
 })
+
+/*****************************************************************************/
+// Regional Sales Chart
+const doughnutCanvas = document.querySelector('#regional-sales-chart').getContext('2d');
+
+var myDoughnutChart = new Chart(doughnutCanvas, {
+    type: 'doughnut',
+    data: {
+        datasets: [{
+            data: [
+                501240,
+                678781,
+                391722,
+                725458
+            ],
+            backgroundColor: [
+                'rgb(125, 150, 250)',
+                'rgb(125, 150, 225)',
+                'rgb(125, 150, 200)',
+                'rgb(125, 150, 175)',
+            ],
+            label: 'Dataset 1'
+        }],
+        labels: [
+            'Central',
+            'East',
+            'South',
+            'West',
+        ]
+    },
+    options: {
+        responsive: true,
+        legend: {
+            position: 'top',
+        },
+        animation: {
+            animateScale: true,
+            animateRotate: true
+        },
+        aspectRatio: 1
+    }
+});
