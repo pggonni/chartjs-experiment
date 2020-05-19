@@ -168,10 +168,10 @@ var myDoughnutChart = new Chart(doughnutCanvas, {
                 725458
             ],
             backgroundColor: [
-                'rgb(125, 150, 250)',
-                'rgb(125, 150, 225)',
-                'rgb(125, 150, 200)',
-                'rgb(125, 150, 175)',
+                'rgb(100, 200, 255)',
+                'rgb(0, 125, 200)',
+                'rgb(0, 80, 150)',
+                'rgb(0, 40, 100)',
             ],
             label: 'Dataset 1'
         }],
@@ -191,6 +191,16 @@ var myDoughnutChart = new Chart(doughnutCanvas, {
             animateScale: true,
             animateRotate: true
         },
-        aspectRatio: 1
+        aspectRatio: 1,
+        tooltips: {
+            backgroundColor: 'white',
+            titleFontColor: 'rgba(0, 0, 0, 0.5)',
+            bodyFontSize: 16,
+            bodyFontColor: 'rgba(0, 0, 0, 0.7)',
+            borderColor: 'rgba(0, 0, 0, 0.1)',
+            borderWidth: 1,
+            xPadding: 16,
+            yPadding: 16
+        }
     }
 });
