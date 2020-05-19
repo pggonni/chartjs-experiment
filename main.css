@@ -3,7 +3,9 @@
             --light-indigo: rgb(70, 125, 255);
 
             --light-grey: rgb(150, 150, 150);
-            --blue-1: rgb(200, 215, 240);
+
+            --blue-2: rgb(144, 177, 255);
+            --blue-1: rgb(200, 215, 250);
         }
         
         body {
@@ -56,6 +58,11 @@
             border-radius: 25px;
             background-color: var(--blue-1);
             margin-left: 8px;
+            text-decoration: none;
+            color: inherit;
+        }
+        .category-pill:hover {
+            background-color: var(--blue-2);
         }
         .mini-note{
             color: var(--light-grey);
